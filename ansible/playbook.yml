@@ -1,0 +1,10 @@
+---
+# PLAY PARA CONFIGURACAO A INSTANCIA GCP
+- hosts: all
+  name: Configurando instancia GCP
+  remote_user: bruno.souza.clc3
+  become: root
+  tasks:
+    - name: Ajustando Timezone
+      timezone:
+        name: America/Sao_Paulo
