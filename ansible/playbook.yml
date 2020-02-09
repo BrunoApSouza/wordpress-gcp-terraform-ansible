@@ -10,10 +10,10 @@
         name: America/Sao_Paulo
 
      - name: Instalando Apache e PHP
-      apt: 
+      apt:
        state: present
        update_cache: yes
-       pkg: 
+       pkg:
          - apache2
          - php-curl
          - php-gd
