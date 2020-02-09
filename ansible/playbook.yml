@@ -28,7 +28,6 @@
              - php-mysql
              - mysql-client
 
-
     - name: Download WordPress
           get_url:
             url=https://wordpress.org/latest.tar.gz
