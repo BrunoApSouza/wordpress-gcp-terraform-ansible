@@ -9,7 +9,7 @@
       timezone:
         name: America/Sao_Paulo
 
-     - name: Instalando Apache e PHP
+    - name: Instalando Apache e PHP
       apt:
        state: present
        update_cache: yes
