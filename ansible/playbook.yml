@@ -3,7 +3,7 @@
 - hosts: all
   name: Configurando instancia GCP
   remote_user: bruno.souza.clc3
-  become: root
+  become: yes
   tasks:
     - name: Ajustando Timezone
       timezone:
