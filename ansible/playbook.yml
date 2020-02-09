@@ -35,23 +35,23 @@
         validate_certs=no
 
     - name: Desempacotando o TAR do Wordpress
-          unarchive:
-            src: /tmp/wordpress.tar.gz
-            dest: /var/www/
-            owner: www-data
-            group: www-data
-            copy: no
+      unarchive:
+        src: /tmp/wordpress.tar.gz
+        dest: /var/www/
+        owner: www-data
+        group: www-data
+        copy: no
 
     - name: Configurando o Apache
-          lineinfile:
-            dest=/etc/apache2/sites-enabled/000-default.conf
-            regexp="(.)+DocumentRoot /var/www/html"
-            line="DocumentRoot /var/www/wordpress"
-          notify:
-            - restart apache
+      lineinfile:
+        dest=/etc/apache2/sites-enabled/000-default.conf
+        regexp="(.)+DocumentRoot /var/www/html"
+        line="DocumentRoot /var/www/wordpress"
+      notify:
+        - restart apache
 
-      handlers:
-        - name: restart apache
-          service:
-            name: apache2
-            state: restarted
+  handlers:
+    - name: restart apache
+      service:
+        name: apache2
+        state: restarted
