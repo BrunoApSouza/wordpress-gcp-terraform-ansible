@@ -9,24 +9,24 @@
       timezone:
         name: America/Sao_Paulo
 
-    - name: Instalando Apache e PHP
-          apt: 
-           state: present
-           update_cache: yes
-           pkg: 
-             - apache2
-             - php-curl
-             - php-gd
-             - php-mbstring
-             - php-xml
-             - php-xmlrpc
-             - php-soap
-             - php-intl
-             - php-zip
-             - php
-             - libapache2-mod-php
-             - php-mysql
-             - mysql-client
+     - name: Instalando Apache e PHP
+      apt: 
+       state: present
+       update_cache: yes
+       pkg: 
+         - apache2
+         - php-curl
+         - php-gd
+         - php-mbstring
+         - php-xml
+         - php-xmlrpc
+         - php-soap
+         - php-intl
+         - php-zip
+         - php
+         - libapache2-mod-php
+         - php-mysql
+         - mysql-client
 
     - name: Download WordPress
           get_url:
